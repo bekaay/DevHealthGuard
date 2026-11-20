@@ -23,6 +23,18 @@ public class Exercise {
         return this.time;
     }
 
+    public void setTime(int time) {
+        this.time = time;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     @Override
     public String toString() {
         return "[Reminder: " + title + "] " + description + " (Every " + time + " mins)";
