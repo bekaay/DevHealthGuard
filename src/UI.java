@@ -17,8 +17,10 @@ public class UI {
             System.out.println("What recommended reminder would you like to add?");
             System.out.println("| 1. Eye health | 2. Posture check | 3. Back Stretch | 4. Add all |");
             int reminderChoice = scanner.nextInt();
+            RecommendedOption recommendedOption = RecommendedOption.fromChoice(reminderChoice);
 
-
+            String result = userAction.addRecommendedReminder(recommendedOption);
+            System.out.println(result);
         }
     }
 }

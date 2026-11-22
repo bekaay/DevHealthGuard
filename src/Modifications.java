@@ -1,11 +1,8 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Modifications {
-    private List<Exercise> reminders;
-
-    public Modifications(List<Exercise> reminders) {
-        this.reminders = reminders;
-    }
+    private final List<Exercise> reminders = new ArrayList<>();
 
     public void changeTime(int index, int time) {
         if (index >= 0 && index < reminders.size()) {
