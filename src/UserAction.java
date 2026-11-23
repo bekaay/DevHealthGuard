@@ -10,25 +10,24 @@ public class UserAction {
 
         return switch (choice) {
             case EYE_HEALTH -> {
-                Exercise exercise = new Exercise("Eye Health", "Look at something far away for 20 seconds.", 20);
-                reminder.addExercise(exercise);
+                createReminder("Eye Health", "Look at something far away for 20 seconds.", 20);
                 yield "Added Eye health reminder";}
             case POSTURE_CHECK -> {
-                Exercise exercise = new Exercise("Posture check", "Fix your posture, roll your shoulders back, un-cross your legs", 45);
-                reminder.addExercise(exercise);
+                createReminder("Posture check", "Fix your posture, roll your shoulders back, un-cross your legs", 45);
                 yield "Added Posture check reminder";}
             case BACK_STRETCH -> {
-                Exercise exercise = new Exercise("Back Stretch", "Stand up and do some back extensions, do 5 steps forward and backwards", 60);
-                reminder.addExercise(exercise);
+                createReminder("Back Stretch", "Stand up and do some back extensions, do 5 steps forward and backwards", 60);
                 yield "Added Back stretch reminder";}
             case ALL -> {
-                Exercise exercise = new Exercise("Eye Health", "Look at something far away for 20 seconds.", 20);
-                reminder.addExercise(exercise);
-                Exercise exercise1 = new Exercise("Posture check", "Fix your posture, roll your shoulders back, un-cross your legs", 45);
-                reminder.addExercise(exercise1);
-                Exercise exercise2 = new Exercise("Back Stretch", "Stand up and do some back extensions, do 5 steps forward and backwards", 60);
-                reminder.addExercise(exercise2);
+                createReminder("Eye Health", "Look at something far away for 20 seconds.", 20);
+                createReminder("Posture check", "Fix your posture, roll your shoulders back, un-cross your legs", 45);
+                createReminder("Back Stretch", "Stand up and do some back extensions, do 5 steps forward and backwards", 60);
                 yield "Added all recommended reminders";}
         };
+    }
+
+    public void createReminder(String title, String description, int time) {
+        Exercise exercise = new Exercise(title, description, time);
+        reminder.addExercise(exercise);
     }
 }

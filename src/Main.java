@@ -5,6 +5,8 @@ import java.util.concurrent.TimeUnit;
 
 public class Main {
     public static void main(String[] args) {
+        UI ui = new UI();
+        ui.welcome();
 
         List<Exercise> reminders = new ArrayList<>();
 
